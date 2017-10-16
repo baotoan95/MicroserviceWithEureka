@@ -1,0 +1,21 @@
+#Service register under this name
+#Control the view resolver
+spring:
+  application:
+    name: consumer-application
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+#Discovery server access
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
+      
+#Disable spring boot's whitelabel default error page, so we can use our own
+server:
+  error:
+    whitelabel:
+      enabled: false
